@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>Servlets d'exports RDF</display-name>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ServletViewRDFResources</display-name>
+		<servlet-name>ServletViewRDFResources</servlet-name>
+		<servlet-class>fr.natoine.rdf.viewResources.servlets.ServletViewRDFResources</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletViewRDFResources</servlet-name>
+		<url-pattern>/ServletViewRDFResources</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ServletViewRDFAgents</display-name>
+		<servlet-name>ServletViewRDFAgents</servlet-name>
+		<servlet-class>fr.natoine.rdf.viewAgents.servlets.ServletViewRDFAgents</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletViewRDFAgents</servlet-name>
+		<url-pattern>/ServletViewRDFAgents</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ServletViewRDFApplications</display-name>
+		<servlet-name>ServletViewRDFApplications</servlet-name>
+		<servlet-class>fr.natoine.rdf.viewApplications.servlets.ServletViewRDFApplications</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletViewRDFApplications</servlet-name>
+		<url-pattern>/ServletViewRDFApplications</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ServletRDFVocabulary</display-name>
+		<servlet-name>ServletRDFVocabulary</servlet-name>
+		<servlet-class>fr.natoine.rdf.vocabulary.servlets.ServletRDFVocabulary</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletRDFVocabulary</servlet-name>
+		<url-pattern>/ServletRDFVocabulary</url-pattern>
+	</servlet-mapping>
+</web-app>
