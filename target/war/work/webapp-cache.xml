@@ -16,6 +16,7 @@
           <string>META-INF/persistence.xml</string>
           <string>META-INF/project-goal.txt</string>
           <string>properties/defaultProperties</string>
+          <string>WEB-INF/jsp/servletAllRSS/rss.jsp</string>
           <string>WEB-INF/jsp/servletRDFVocabulary/view.jsp</string>
           <string>WEB-INF/jsp/servletViewRDFAgents/not_valid_id.jsp</string>
           <string>WEB-INF/jsp/servletViewRDFAgents/view_agent.jsp</string>
@@ -28,17 +29,18 @@
           <string>WEB-INF/classes/fr/natoine/rdf/viewApplications/servlets/ServletViewRDFApplications.class</string>
           <string>WEB-INF/classes/fr/natoine/rdf/viewResources/servlets/ServletViewRDFResources.class</string>
           <string>WEB-INF/classes/fr/natoine/rdf/vocabulary/servlets/ServletRDFVocabulary.class</string>
+          <string>WEB-INF/classes/fr/natoine/rss/servlets/ServletAllRSS.class</string>
           <string>WEB-INF/lib/servlet-api-2.4-20040521.jar</string>
-          <string>WEB-INF/lib/controler-user-2.0.0.jar</string>
+          <string>WEB-INF/lib/dao-user-2.0.0.jar</string>
           <string>WEB-INF/lib/model-user-1.0.0.jar</string>
           <string>WEB-INF/lib/slf4j-simple-1.5.6.jar</string>
           <string>WEB-INF/lib/model-resource-1.0.0.jar</string>
           <string>WEB-INF/lib/string-op-1.0.0.jar</string>
-          <string>WEB-INF/lib/controler-annotation-1.0.0.jar</string>
+          <string>WEB-INF/lib/dao-annotation-1.0.0.jar</string>
           <string>WEB-INF/lib/model-annotation-1.0.0.jar</string>
           <string>WEB-INF/lib/json-20090211.jar</string>
-          <string>WEB-INF/lib/controler-resource-1.0.0.jar</string>
-          <string>WEB-INF/lib/controler-htmlDocs-1.0.0.jar</string>
+          <string>WEB-INF/lib/dao-resource-1.0.0.jar</string>
+          <string>WEB-INF/lib/dao-htmlDocs-1.0.0.jar</string>
           <string>WEB-INF/lib/model-htmlDocs-1.0.0.jar</string>
           <string>WEB-INF/lib/model-document-1.0.0.jar</string>
         </pathsSet>
@@ -60,50 +62,50 @@
     <org.apache.maven.plugin.war.util.DependencyInfo>
       <dependency>
         <groupId>fr.natoine</groupId>
-        <artifactId>controler-user</artifactId>
+        <artifactId>dao-user</artifactId>
         <version>2.0.0</version>
         <type>jar</type>
         <scope>compile</scope>
         <exclusions/>
         <optional>false</optional>
       </dependency>
-      <targetFileName>controler-user-2.0.0.jar</targetFileName>
+      <targetFileName>dao-user-2.0.0.jar</targetFileName>
     </org.apache.maven.plugin.war.util.DependencyInfo>
     <org.apache.maven.plugin.war.util.DependencyInfo>
       <dependency>
         <groupId>fr.natoine</groupId>
-        <artifactId>controler-annotation</artifactId>
+        <artifactId>dao-annotation</artifactId>
         <version>1.0.0</version>
         <type>jar</type>
         <scope>compile</scope>
         <exclusions/>
         <optional>false</optional>
       </dependency>
-      <targetFileName>controler-annotation-1.0.0.jar</targetFileName>
+      <targetFileName>dao-annotation-1.0.0.jar</targetFileName>
     </org.apache.maven.plugin.war.util.DependencyInfo>
     <org.apache.maven.plugin.war.util.DependencyInfo>
       <dependency>
         <groupId>fr.natoine</groupId>
-        <artifactId>controler-resource</artifactId>
+        <artifactId>dao-resource</artifactId>
         <version>1.0.0</version>
         <type>jar</type>
         <scope>compile</scope>
         <exclusions/>
         <optional>false</optional>
       </dependency>
-      <targetFileName>controler-resource-1.0.0.jar</targetFileName>
+      <targetFileName>dao-resource-1.0.0.jar</targetFileName>
     </org.apache.maven.plugin.war.util.DependencyInfo>
     <org.apache.maven.plugin.war.util.DependencyInfo>
       <dependency>
         <groupId>fr.natoine</groupId>
-        <artifactId>controler-htmlDocs</artifactId>
+        <artifactId>dao-htmlDocs</artifactId>
         <version>1.0.0</version>
         <type>jar</type>
         <scope>compile</scope>
         <exclusions/>
         <optional>false</optional>
       </dependency>
-      <targetFileName>controler-htmlDocs-1.0.0.jar</targetFileName>
+      <targetFileName>dao-htmlDocs-1.0.0.jar</targetFileName>
     </org.apache.maven.plugin.war.util.DependencyInfo>
     <org.apache.maven.plugin.war.util.DependencyInfo>
       <dependency>

@@ -20,8 +20,6 @@ package fr.natoine.rdf.viewResources.servlets;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -31,11 +29,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import fr.natoine.controler.annotation.DAOAnnotation;
-import fr.natoine.controler.resource.DAOResource;
+import fr.natoine.dao.annotation.DAOAnnotation;
+import fr.natoine.dao.resource.DAOResource;
 import fr.natoine.model_annotation.Annotation;
 import fr.natoine.model_resource.Resource;
-import fr.natoine.model_resource.URI;
 
 public class ServletViewRDFResources extends HttpServlet 
 {
@@ -43,7 +40,7 @@ public class ServletViewRDFResources extends HttpServlet
 
 	private static EntityManagerFactory emf_annotation = null ;
 	private static DAOAnnotation daoAnnotation = null ;
-	private static DAOResource daoResource = null ;
+	//private static DAOResource daoResource = null ;
 	
 	 /**
      * @see HttpServlet#HttpServlet()
@@ -53,7 +50,7 @@ public class ServletViewRDFResources extends HttpServlet
         super();
         emf_annotation = Persistence.createEntityManagerFactory("annotation");
         daoAnnotation = new DAOAnnotation(emf_annotation);
-        daoResource = new DAOResource(emf_annotation);
+        //daoResource = new DAOResource(emf_annotation);
     }
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
@@ -65,7 +62,7 @@ public class ServletViewRDFResources extends HttpServlet
 			Resource _to_view = daoAnnotation.retrieveResource(id);
 			if(_to_view.getId() != null)
 			{
-				//afficher la ressource
+				//Préparer les urls nécessaires
 				String url_resources = request.getRequestURL().toString();
 				String _url_view_agents = url_resources.substring(0 , url_resources.lastIndexOf("/") + 1).concat("ServletViewRDFAgents");				
 				
@@ -84,6 +81,7 @@ public class ServletViewRDFResources extends HttpServlet
 					for(Annotation annotation : annotations) rdf_toinject = rdf_toinject.concat(annotation.toSeeAlso(url_resources));
 					rdf_toinject = rdf_toinject.concat("</annotea:hasAnnotation>");
 				}
+                                //RDF de la ressource
 				String rdf = _to_view.toRDF(url_resources , _url_view_agents , rdf_toinject);
 				request.setAttribute("rdf", rdf);
 				request.setAttribute("headers" , _to_view.rdfHeader());

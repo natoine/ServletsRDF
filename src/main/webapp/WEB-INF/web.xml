@@ -45,4 +45,15 @@
 		<servlet-name>ServletRDFVocabulary</servlet-name>
 		<url-pattern>/ServletRDFVocabulary</url-pattern>
 	</servlet-mapping>
+        <servlet>
+		<description> Exports RSS
+		</description>
+		<display-name>ServletAllRSS</display-name>
+		<servlet-name>ServletAllRSS</servlet-name>
+		<servlet-class>fr.natoine.rss.servlets.ServletAllRSS</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletAllRSS</servlet-name>
+		<url-pattern>/ServletAllRSS</url-pattern>
+	</servlet-mapping>
 </web-app>

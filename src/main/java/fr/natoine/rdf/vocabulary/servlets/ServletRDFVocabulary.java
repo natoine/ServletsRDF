@@ -30,8 +30,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import fr.natoine.controler.annotation.DAOAnnotation;
-import fr.natoine.controler.annotation.DAOPost;
+import fr.natoine.dao.annotation.DAOAnnotation;
+import fr.natoine.dao.annotation.DAOPost;
 import fr.natoine.model_annotation.AnnotationStatus;
 import fr.natoine.model_annotation.PostStatus;
 

@@ -3,6 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>fr.natoine</groupId>
   <artifactId>ServletsRDF</artifactId>
+  <name>fr.natoine.ServletsRDF</name>
   <version>1.0.0</version>
   <packaging>war</packaging>
 	<url>http://www.natoine.fr</url>
@@ -26,22 +27,22 @@
    		</dependency>
    		<dependency>
 			<groupId>fr.natoine</groupId>
-			<artifactId>controler-user</artifactId>
+			<artifactId>dao-user</artifactId>
 			<version>2.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>fr.natoine</groupId>
-			<artifactId>controler-annotation</artifactId>
+			<artifactId>dao-annotation</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>fr.natoine</groupId>
-			<artifactId>controler-resource</artifactId>
+			<artifactId>dao-resource</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>fr.natoine</groupId>
-			<artifactId>controler-htmlDocs</artifactId>
+			<artifactId>dao-htmlDocs</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 		<!-- for hibernate use only -->

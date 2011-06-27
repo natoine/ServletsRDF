@@ -28,7 +28,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import fr.natoine.controler.user.DAOUser;
+import fr.natoine.dao.user.DAOUser;
 import fr.natoine.model_user.Application;
 
 public class ServletViewRDFApplications extends HttpServlet {
